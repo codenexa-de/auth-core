@@ -1,7 +1,7 @@
 {
   "name": "@codenexa/auth-core",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.2",
+  "private": false,
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,16 +11,28 @@
       "default": "./dist/index.js"
     }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build",
     "test": "npm run build && node --test test/**/*.test.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.56.0",
     "bcryptjs": "^3.0.3"
   },
   "devDependencies": {
     "@types/node": "^20.19.0",
     "typescript": "^5.8.3"
-  }
+  },
+  "description": "Framework-agnostic authentication core for Code Nexa projects.",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [],
+  "author": "Kamal Idris - CodeNexa",
+  "license": "ISC",
+  "gitRepository": "https://github.com/codenexa-de/auth-core.git"
 }
-

@@ -14,4 +14,4 @@ export * from "./core/createAuth.js";
 export * from "./adapters/bcryptjsHashProvider.js";
 export * from "./adapters/nodeCryptoTokenProvider.js";
 export * from "./adapters/systemClock.js";
-
+export * from "./adapters/supabaseRepositories.js";
